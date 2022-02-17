@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAMURAI ORG</title>
+  <style>
+    html, body{
+      margin: 0;
+      padding: 0;
+      background: black;
+    }
+
+    .img-wrap{
+      display: flex;
+      justify-content: center;
+    }
+    .img-wrap img{
+      width: 200px;
+      visibility: hidden;
+    }
+
+    .list-wrap{
+      color: #a3a3a3;
+      text-align: center;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="img-wrap">
+    <img id="logo" src="" >
+  </div>
+
+  <div class="list-wrap">
+    Searching... project not found
+  </div>
+
+  <script>
+    const imgLoad = (obj, url, callback) => {
+      let img = new Image()
+      img.src = url
+      obj.src = url
+      img.onload = () => {
+        callback.call(img)
+      }
+    }
+    const imgLoadCallback = () => {
+      document.querySelector('#logo').style.visibility = 'visible'
+      document.querySelector('.list-wrap').style.visibility = 'visible'
+    }
+
+    imgLoad(
+      document.querySelector('#logo'),
+      'https://s2.loli.net/2022/02/17/rbOtlhEsevHqnYf.jpg',
+      imgLoadCallback
+    )
+  </script>
+</body>
+</html>
