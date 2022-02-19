@@ -5,36 +5,57 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAMURAI ORG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap" rel="stylesheet">
   <style>
     html, body{
       margin: 0;
       padding: 0;
       background: black;
+      font-family: 'Volkhov', sans-serif;
     }
 
+    .web{
+      visibility: hidden;
+    }
     .img-wrap{
       display: flex;
       justify-content: center;
     }
     .img-wrap img{
       width: 200px;
-      visibility: hidden;
     }
 
-    .list-wrap{
+    .project-title{
+      font-size: 20px;
+      color: #ff2500;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .project-wrap{
+      font-size: 20px;
       color: #a3a3a3;
       text-align: center;
-      visibility: hidden;
+    }
+    .project-wrap a{
+      color: #a3a3a3;
     }
   </style>
 </head>
 <body>
-  <div class="img-wrap">
-    <img id="logo" src="" >
-  </div>
-
-  <div class="list-wrap">
-    Searching... project not found
+  <div class="web">
+    <div class="img-wrap">
+      <img id="logo" src="" >
+    </div>
+  
+    <div class="project-title">
+      SAMRUAI VOICE PROJECT
+    </div>
+    <div class="project-wrap">
+      <span>Tarot Card >>></span>
+      <span>[ <a href="https://tarotcard.vercel.app/">Preview</a> | <a href="https://github.com/samuraivoice/tarotcard">Github</a> ]</span>
+    </div>
   </div>
 
   <script>
@@ -47,8 +68,7 @@
       }
     }
     const imgLoadCallback = () => {
-      document.querySelector('#logo').style.visibility = 'visible'
-      document.querySelector('.list-wrap').style.visibility = 'visible'
+      document.querySelector('.web').style.visibility = 'visible'
     }
 
     imgLoad(
