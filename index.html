@@ -22,7 +22,7 @@
     }
     .img-wrap{
       position: relative;
-      margin-top: 30px;
+      margin-top: 40px;
       display: flex;
       justify-content: center;
     }
@@ -30,16 +30,7 @@
       z-index: 5;
       width: 300px;
     }
-    .line{
-      z-index: 1;
-      position: absolute;
-      top: 190px;
-      height: 2px;
-      width: 100%;
-      background: red;
-    }
-
-    .song{
+    .lyrics{
       color: #3a3a3a;
       margin: auto;
       text-align: center;
@@ -47,30 +38,43 @@
     }
 
     .project-title{
+      position: relative;
       font-size: 20px;
-      color: #ff2500;
+      color: #c31306;
       text-align: center;
-      margin-bottom: 20px;
+      margin:0 auto 30px;
+      width: 300px;
     }
     .project-wrap{
       font-size: 18px;
-      color: #a3a3a3;
+      color: #c7c7c7;
       text-align: center;
       user-select: text;
     }
     .project-wrap a{
-      color: #a3a3a3;
+      color: #c7c7c7;
+    }
+    .project-title-sub {
+      color: #2c2c2c;
+      position: absolute;
+      text-align: center;
+      font-size: 16px;
+      top: 18px;
+      right: -5px;
+    }
+    .project-title-sub a{
+      color: #2c2c2c;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <div class="web">
     <div class="img-wrap">
-      <!-- <div class="line"></div> -->
       <img id="logo" src="" >
     </div>
 
-    <div class="song">
+    <div class="lyrics">
       <div>A thing of beauty — I know</div>
       <div>Will never fade away</div>
       <div>What you did to me — I know</div>
@@ -80,12 +84,14 @@
   
     <div class="project-title">
       SAMRUAI VOICE PROJECT
+      <div class="project-title-sub">Created by <a target="_blank" href="https://github.com/bouquetrender">VE</a></div>
     </div>
     <div class="project-wrap">
       <span>Tarot Card</span>
       <span style="margin: 0 7px">>>></span>
-      <span>[ <a href="https://tarotcard.vercel.app/">Preview</a> | <a href="https://github.com/samuraivoice/tarotcard">Github</a> ]</span>
+      <span>[ <a target="_blank" href="https://tarotcard.vercel.app/">Preview</a> | <a href="https://github.com/samuraivoice/tarotcard">Github</a> ]</span>
     </div>
+
   </div>
 
   <script>
