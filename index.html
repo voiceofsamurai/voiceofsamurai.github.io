@@ -16,9 +16,14 @@
       font-family: 'Volkhov', sans-serif;
       user-select: none;
     }
-
-    .web{
+    .loading{
       visibility: visible;
+      margin-top: 40px;
+      color: white;
+      text-align: center;
+    }
+    .web{
+      visibility: none;
       padding-bottom: 50px;
     }
     .img-wrap{
@@ -70,9 +75,14 @@
   </style>
 </head>
 <body>
+  <div class="loading">
+    PROJECT LOADING...<br/>
+    PROJECT LOADING...<br/>
+    PROJECT LOADING...<br/>
+  </div>
   <div class="web">
     <div class="img-wrap">
-      <img id="logo" src="/samurai.jpg" >
+      <img id="logo" src="" >
     </div>
 
     <div class="lyrics">
@@ -106,14 +116,15 @@
       }
     }
     const imgLoadCallback = () => {
+      document.querySelector('.loading').style.visibility = 'none'
       document.querySelector('.web').style.visibility = 'visible'
     }
 
-    // imgLoad(
-    //   document.querySelector('#logo'),
-    //   '',
-    //   imgLoadCallback
-    // )
+    imgLoad(
+      document.querySelector('#logo'),
+      '/samurai.jpg',
+      imgLoadCallback
+    )
   </script>
 </body>
 </html>
