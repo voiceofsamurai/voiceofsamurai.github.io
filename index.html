@@ -17,8 +17,7 @@
       user-select: none;
     }
     .loading{
-      visibility: visible;
-      margin-top: 40px;
+      display: block;
       color: white;
       text-align: center;
     }
@@ -124,7 +123,7 @@
       }
     }
     const imgLoadCallback = () => {
-      document.querySelector('.loading').style.visibility = 'hidden'
+      document.querySelector('.loading').style.display = 'none'
       document.querySelector('.web').style.visibility = 'visible'
     }
 
