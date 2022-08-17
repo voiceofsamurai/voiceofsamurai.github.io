@@ -1,150 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAMURAI VOICE</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap" rel="stylesheet">
-  <style>
-    html, body{
-      margin: 0;
-      padding: 0;
-      background: black;
-      font-family: 'Volkhov', sans-serif;
-      user-select: none;
-    }
-    .loading{
-      display: block;
-      color: white;
-      text-align: center;
-    }
-    .web{
-      visibility: hidden;
-      padding-bottom: 50px;
-    }
-    .img-wrap{
-      position: relative;
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-    }
-    .img-wrap img{
-      z-index: 5;
-      width: 300px;
-    }
-    .lyrics{
-      color: #3a3a3a;
-      margin: auto;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .project-title{
-      position: relative;
-      font-size: 20px;
-      color: #c31306;
-      text-align: center;
-      margin:0 auto 30px;
-      width: 300px;
-    }
-    .project-wrap{
-      font-size: 18px;
-      color: #c7c7c7;
-      text-align: center;
-      user-select: text;
-    }
-    .project-wrap:not(:first-child){
-      margin-top: 5px;
-    }
-    .project-wrap a{
-      color: #c7c7c7;
-    }
-    .project-title-sub {
-      color: #2c2c2c;
-      position: absolute;
-      text-align: center;
-      font-size: 16px;
-      top: 18px;
-      right: -5px;
-    }
-    .project-title-sub a{
-      color: #2c2c2c;
-      text-decoration: none;
-    }
-
-    footer{
-      text-align: center;
-      margin-top: 30px;
-    }
-    footer a{
-      color: #b8b8b8;
-    }
-  </style>
-</head>
-<body>
-  <div class="loading">
-    <div style="color: #c31306; margin-top: 20px; margin-bottom: 5px;">WARNING 紧急 WARNING</div>
-    PROJECT LOADING...<br/>
-    PROJECT LOADING...<br/>
-    PROJECT LOADING...<br/>
-  </div>
-  <div class="web">
-    <div class="img-wrap">
-      <img id="logo" src="" >
-    </div>
-
-    <div class="lyrics">
-      <div>A thing of beauty — I know</div>
-      <div>Will never fade away</div>
-      <div>What you did to me — I know</div>
-      <div>Said what you had to say</div>
-      <div>But a thing of beauty</div>
-      <div>Will never fade away</div>
-    </div>
-  
-    <div class="project-title">
-      VOICE OF SAMURAI PROJECT<br/>
-      武侍之声
-      <div class="project-title-sub">Created by <a target="_blank" href="https://github.com/bouquetrender">VE</a></div>
-    </div>
-    <div class="project-wrap">
-      <span>Tarot Card</span>
-      <span style="margin: 0 7px">>>></span>
-      <span>[ <a target="_blank" href="https://tarotcard.vercel.app/">Preview</a> | <a href="https://github.com/voiceofsamurai/tarotcard">Github</a> ]</span>
-    </div>
-    <div class="project-wrap">
-      <span>Corporations</span>
-      <span style="margin: 0 7px">>>></span>
-      <span>[ <a target="_blank" href="https://corporations.vercel.app/">Preview</a> | <a href="https://github.com/voiceofsamurai/corporations">Github</a> ]</span>
-    </div>
-
-    <footer>
-      <a href="https://bouquetrender.github.io/voice-of-samurai" target="_blank">Project Description</a>
-    </footer>
-  </div>
-
-  <script>
-    const imgLoad = (obj, url, callback) => {
-      let img = new Image()
-      img.src = url
-      obj.src = url
-      img.onload = () => {
-        callback.call(img)
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAMURAI VOICE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: black;
+        font-family: "Volkhov", sans-serif;
+        user-select: none;
       }
-    }
-    const imgLoadCallback = () => {
-      document.querySelector('.loading').style.display = 'none'
-      document.querySelector('.web').style.visibility = 'visible'
-    }
+      .loading {
+        display: block;
+        color: white;
+        text-align: center;
+      }
+      .web {
+        visibility: hidden;
+        padding-bottom: 50px;
+      }
+      .img-wrap {
+        position: relative;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      .img-wrap img {
+        z-index: 5;
+        width: 300px;
+      }
+      .lyrics {
+        color: #3a3a3a;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 20px;
+      }
 
-    imgLoad(
-      document.querySelector('#logo'),
-      '/samurai.jpg',
-      imgLoadCallback
-    )
-  </script>
-</body>
+      .project-title {
+        position: relative;
+        font-size: 20px;
+        color: #c31306;
+        text-align: center;
+        margin: 0 auto 30px;
+        width: 300px;
+      }
+      .project-wrap {
+        font-size: 18px;
+        color: #c7c7c7;
+        text-align: center;
+        user-select: text;
+      }
+      .project-wrap:not(:first-child) {
+        margin-top: 5px;
+      }
+      .project-wrap a {
+        color: #c7c7c7;
+      }
+      .project-title-sub {
+        color: #2c2c2c;
+        position: absolute;
+        text-align: center;
+        font-size: 16px;
+        top: 18px;
+        right: -5px;
+      }
+      .project-title-sub a {
+        color: #2c2c2c;
+        text-decoration: none;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 30px;
+      }
+      footer a {
+        color: #b8b8b8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading">
+      <div style="color: #c31306; margin-top: 20px; margin-bottom: 5px">
+        WARNING 紧急 WARNING
+      </div>
+      PROJECT LOADING...<br />
+      PROJECT LOADING...<br />
+      PROJECT LOADING...<br />
+    </div>
+    <div class="web">
+      <div class="img-wrap">
+        <img id="logo" src="" />
+      </div>
+
+      <div class="lyrics">
+        <div>A thing of beauty — I know</div>
+        <div>Will never fade away</div>
+        <div>What you did to me — I know</div>
+        <div>Said what you had to say</div>
+        <div>But a thing of beauty</div>
+        <div>Will never fade away</div>
+      </div>
+
+      <div class="project-title">
+        VOICE OF SAMURAI PROJECT<br />
+        武侍之声
+        <div class="project-title-sub">
+          Created by
+          <a target="_blank" href="https://github.com/bouquetrender">VE</a>
+        </div>
+      </div>
+      <div class="project-wrap">
+        <span>Tarot Card</span>
+        <span style="margin: 0 7px">>>></span>
+        <span
+          >[
+          <a target="_blank" href="https://tarotcard.vercel.app/">Preview</a> |
+          <a href="https://github.com/voiceofsamurai/tarotcard">Github</a>
+          ]</span
+        >
+      </div>
+      <div class="project-wrap">
+        <span>Corporations</span>
+        <span style="margin: 0 7px">>>></span>
+        <span
+          >[
+          <a target="_blank" href="https://corporations.vercel.app/">Preview</a>
+          |
+          <a href="https://github.com/voiceofsamurai/corporations">Github</a>
+          ]</span
+        >
+      </div>
+
+      <footer>
+        <a
+          href="https://bouquetrender.github.io/voice-of-samurai"
+          target="_blank"
+          >Project Description</a
+        >
+      </footer>
+    </div>
+
+    <script>
+      const imgLoad = (obj, url, callback) => {
+        let img = new Image();
+        img.src = url;
+        obj.src = url;
+        img.onload = () => {
+          callback.call(img);
+        };
+      };
+      const imgLoadCallback = () => {
+        document.querySelector(".loading").style.display = "none";
+        document.querySelector(".web").style.visibility = "visible";
+      };
+
+      imgLoad(document.querySelector("#logo"), "/samurai.jpg", imgLoadCallback);
+    </script>
+  </body>
 </html>
